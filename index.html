@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>para delia</title>
+    <style>
+        .greetings span {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const greetingsDiv = document.querySelector('.greetings');
+            greetingsDiv.textContent = 'hola'; // Texto normal
+
+
+
+            setTimeout(() => {
+                greetingsDiv.textContent = 'buenos días'; // Cambia a "Buenos días"
+                setTimeout(() => {
+                    greetingsDiv.textContent = 'mi princesa preciosa'; // Cambia a "mi princesa preciosa"
+                    setTimeout(() => {
+                        greetingsDiv.innerHTML = `
+                            <span>-</span>
+                            <span>-</span>
+                            <span>-</span>
+                            <span>-</span>
+                            <span>-</span>`; // Finalmente, cambia a los "-"
+                    }, 3000); // Pausa de 3 segundos para los guiones
+                }, 3000); // Pausa de 3 segundos para "mi princesa preciosa"
+            }, 3000); // Pausa de 3 segundos para "buenos días"
+        }
+    </script>
+</head>
+
+<body>
+    <div class="greetings">
+        <!-- Texto normal se actualizará aquí -->
+    </div>
+    <div class="description">
+        <span>te amo mucho amor, mucho</span>
+    </div>
+    <div class="button">
+        <button class="botones">
+            <a href="flower.html" style="color: #fff;">toca acá</a>
+        </button>
+    </div>
+
+</body>
+
+</html>
+
